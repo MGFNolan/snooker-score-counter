@@ -1,0 +1,150 @@
+#all {
+    border: 3px solid black;
+  }
+  
+  #playerScores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  #player1Scores {
+    border-right: 1.5px solid black;
+  }
+  
+  #player2Scores {
+    border-left: 1.5px solid black;
+  }
+  
+  #player1Btns button,
+  #player2Btns button,
+  .submitBtn {
+    width: 75px;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 8px;
+  }
+  
+  .submitBtn {
+    width: 100px;
+    height: 40px;
+  }
+  
+  #foul1,
+  #foul2 {
+    width: 95% !important;
+  }
+  
+  #player1Btns,
+  #player2Btns {
+    text-align: center;
+  }
+  
+  #scoreDisplay {
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr;
+    text-align: center;
+  }
+  
+  #nameScore1 {
+    text-align: right;
+  }
+  
+  #nameScore2 {
+    text-align: left;
+  }
+  
+  #nameScore1,
+  #nameScore2 {
+    background-color: #e61313;
+    color: white;
+    padding: 0 30px;
+    margin: 0;
+  }
+  
+  #frames {
+    background-color: black;
+    color: yellow;
+  }
+  
+  p,
+  button {
+    font-family: Calibri, sans-serif;
+  }
+  
+  .red:hover {
+    background-color: #d10000;
+  }
+  .red {
+    background-color: #a30000;
+    color: white;
+  }
+  
+  .yellow:hover {
+    background-color: #d1d100;
+  }
+  .yellow {
+    background-color: #a3a300;
+    color: white;
+  }
+  
+  .green:hover {
+    background-color: #00d100;
+  }
+  .green {
+    background-color: #00a300;
+    color: white;
+  }
+  
+  .brown:hover {
+    background-color: #f27900;
+  }
+  .brown {
+    background-color: #c46200;
+    color: white;
+  }
+  
+  .blue:hover {
+    background-color: #0000d1;
+  }
+  .blue {
+    background-color: #0000a3;
+    color: white;
+  }
+  
+  .pink:hover {
+    background-color: #ff647f;
+  }
+  .pink {
+    background-color: #ff3659;
+    color: white;
+  }
+  
+  .black:hover {
+    background-color: #2e2e2e;
+  }
+  .black {
+    background-color: #171717;
+    color: white;
+  }
+  
+  .foul:hover {
+    background-color: #696969;
+  }
+  .foul {
+    background-color: #525252;
+    color: white;
+  }
+  
+  .nameAndBtn {
+    text-align: center;
+  }
+  
+  .nameAndBtn input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+  

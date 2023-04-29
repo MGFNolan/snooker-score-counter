@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="all">
+      <div id="playerScores">
+        <div id="player1Scores">
+          <div id="player1Btns" hidden>
+            <button class="red" id="red1">RED</button>
+            <button class="yellow" id="yellow1">YELLOW</button>
+            <button class="green" id="green1">GREEN</button>
+            <button class="brown" id="brown1">BROWN</button>
+            <button class="blue" id="blue1">BLUE</button>
+            <button class="pink" id="pink1">PINK</button>
+            <button class="black" id="black1">BLACK</button>
+            <div>
+              <button class="foul" id="foul1">FOUL</button>
+            </div>
+          </div>
+          <div class="nameAndBtn">
+            <input
+              placeholder="Enter a name to access scoring..."
+              type="text"
+              id="player1NameInput"
+            />
+            <button id="player1NameSubmit" class="submitBtn player1">
+              Submit Name
+            </button>
+          </div>
+        </div>
+
+        <div id="player2Scores">
+          <div id="player2Btns" hidden>
+            <button class="red" id="red2">RED</button>
+            <button class="yellow" id="yellow2">YELLOW</button>
+            <button class="green" id="green2">GREEN</button>
+            <button class="brown" id="brown2">BROWN</button>
+            <button class="blue" id="blue2">BLUE</button>
+            <button class="pink" id="pink2">PINK</button>
+            <button class="black" id="black2">BLACK</button>
+            <div>
+              <button class="foul" id="foul2">FOUL</button>
+            </div>
+          </div>
+          <div class="nameAndBtn">
+            <input
+              placeholder="Enter a name to access scoring..."
+              type="text"
+              id="player2NameInput"
+            />
+            <button id="player2NameSubmit" class="submitBtn player2">
+              Submit Name
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="scoreDisplay">
+        <div id="nameScore1">
+          <p id="player1NameDisplay">
+            <span id="name1">[Name]</span>
+            <span id="p1Points">0</span>
+          </p>
+        </div>
+
+        <div id="frames">
+          <p>
+            <span id="framesPlayer1">0</span>
+            (<span id="bestOfFrameCount">0</span>)
+            <span id="framesPlayer2">0</span>
+          </p>
+        </div>
+
+        <div id="nameScore2">
+          <p id="player2NameDisplay">
+            <span id="p2Points">0</span>
+            <span id="name2">[Name]</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
