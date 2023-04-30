@@ -9,10 +9,12 @@
   
   #player1Scores {
     border-right: 1.5px solid black;
+    border-bottom: 3px solid black;
   }
   
   #player2Scores {
     border-left: 1.5px solid black;
+    border-bottom: 3px solid black;
   }
   
   #player1Btns button,
@@ -38,6 +40,7 @@
   #player1Btns,
   #player2Btns {
     text-align: center;
+    vertical-align: baseline;
   }
   
   #scoreDisplay {
@@ -148,3 +151,9 @@
     font-size: 20px;
   }
   
+  #foul2Options {
+    width: 80%;
+    border: 3px solid red;
+    background-color: grey;
+    margin: auto;
+  }

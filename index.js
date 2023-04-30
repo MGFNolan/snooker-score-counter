@@ -1,18 +1,21 @@
 const player1Points = document.getElementById("p1Points");
 const player2Points = document.getElementById("p2Points");
-const player1NameSubmit = document.getElementById("player1NameSubmit");
-const player2NameSubmit = document.getElementById("player2NameSubmit");
+const player1NameSubmit = document.getElementById("nameAndBtn1");
+const player2NameSubmit = document.getElementById("nameAndBtn2");
 const player1NameDisplay = document.getElementById("name1");
 const player2NameDisplay = document.getElementById("name2");
 const player1NameInput = document.getElementById("player1NameInput");
 const player2NameInput = document.getElementById("player2NameInput");
 const player1Btns = document.getElementById("player1Btns");
 const player2Btns = document.getElementById("player2Btns");
+const foul2Options = document.getElementById("foul2Options");
 
 let player1Val = 0;
 let player2Val = 0;
 let player1Status = false;
 let player2Status = false;
+let foulShow2 = false;
+let foulShow1 = false;
 
 document.addEventListener("click", function (e) {
   switch (e.target.id) {
@@ -93,12 +96,25 @@ document.addEventListener("click", function (e) {
       break;
 
     case "foul1":
-      player2Val -= 4;
-      player2Points.textContent = player1Val;
+      if (foulShow1) {
+        foul1Options.hidden = false;
+        foulShow1 = false;
+      } else if (!foulShow1) {
+        foul1Options.hidden = true;
+      }
+      //player2Val += 4;
+      //player2Points.textContent = player2Val;
       break;
     case "foul2":
-      player1Val -= 4;
-      player1Points.textContent = player2Val;
+      if (foulShow2) {
+        foul2Options.hidden = true;
+        foulShow2 = false;
+      } else if (!foulShow2) {
+        foul2Options.hidden = false;
+        foulShow2 = true;
+      }
+      //player1Val += 4;
+      //player1Points.textContent = player1Val;
       break;
   }
 });
