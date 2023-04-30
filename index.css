@@ -151,7 +151,7 @@
     font-size: 20px;
   }
   
-  #foul2Options {
+  #foul2Options, #foul1Options {
     width: 80%;
     border: 3px solid red;
     background-color: grey;

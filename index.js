@@ -97,13 +97,12 @@ document.addEventListener("click", function (e) {
 
     case "foul1":
       if (foulShow1) {
-        foul1Options.hidden = false;
+        foul1Options.hidden = true;
         foulShow1 = false;
       } else if (!foulShow1) {
-        foul1Options.hidden = true;
+        foul1Options.hidden = false;
+        foulShow1 = true;
       }
-      //player2Val += 4;
-      //player2Points.textContent = player2Val;
       break;
     case "foul2":
       if (foulShow2) {
@@ -113,8 +112,50 @@ document.addEventListener("click", function (e) {
         foul2Options.hidden = false;
         foulShow2 = true;
       }
-      //player1Val += 4;
-      //player1Points.textContent = player1Val;
+      break;
+
+    case "foulRed1":
+    case "foulYellow1":
+    case "foulGreen1":
+    case "foulBrown1":
+    case "foulMiss1":
+      player2Val += 4;
+      player2Points.textContent = player2Val;
+      break;
+    case "foulRed2":
+    case "foulYellow2":
+    case "foulGreen2":
+    case "foulBrown2":
+    case "foulMiss2":
+      player1Val += 4;
+      player1Points.textContent = player1Val;
+      break;
+
+    case "foulBlue1":
+      player2Val += 5;
+      player2Points.textContent = player2Val;
+      break;
+    case "foulBlue2":
+      player1Val += 5;
+      player1Points.textContent = player1Val;
+      break;
+
+    case "foulPink1":
+      player2Val += 6;
+      player2Points.textContent = player2Val;
+      break;
+    case "foulPink2":
+      player1Val += 6;
+      player1Points.textContent = player1Val;
+      break;
+
+    case "foulBlack1":
+      player2Val += 7;
+      player2Points.textContent = player2Val;
+      break;
+    case "foulBlack2":
+      player1Val += 7;
+      player1Points.textContent = player1Val;
       break;
   }
 });
