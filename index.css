@@ -138,6 +138,10 @@
     background-color: #525252;
     color: white;
   }
+
+  .miss {
+    width: 50% !important;
+  }
   
   .nameAndBtn {
     text-align: center;
@@ -156,4 +160,27 @@
     border: 3px solid red;
     background-color: grey;
     margin: auto;
+  }
+
+  .player1Event {
+    text-align: center;
+    border: 3px solid red;
+    padding-left: 10px;
+  }
+
+  .player2Event {
+    text-align: center;
+    border: 3px solid green;
+    padding-right: 10px;
+  }
+
+  #eventFeed {
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr;
+    border: 3px solid blue;
+    margin: auto;
+  }
+
+  .break {
+    text-align: center;
   }
