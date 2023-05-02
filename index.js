@@ -25,39 +25,53 @@ let player2Name = "";
 
 const addEvent = (player, playerName, ball, other) => {
   if (other == "missed1") {
-    eventFeed.innerHTML += `<div class="player1Event"><p>${
-      playerName + " missed their shot"
-    }</p></div>
+    eventFeed.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="player1Event"><p>${
+        playerName + " missed their shot"
+      }</p></div>
     <div><p class="break">End of Break</p></div>
-    <div></div>`;
+    <div></div>`
+    );
   } else if (other == "missed2") {
-    eventFeed.innerHTML += `<div></div>
+    eventFeed.insertAdjacentHTML(
+      "afterbegin",
+      `<div></div>
     <div><p class="break">End of Break</p></div>
-    <div class="player2Event"><p>${
-      playerName + " missed their shot"
-    }</p></div>`;
+    <div class="player2Event"><p>${playerName + " missed their shot"}</p></div>`
+    );
   } else if (other == "foul1") {
-    eventFeed.innerHTML += `<div class="player1Event"><p>${
-      playerName + " committed a foul on the " + ball
-    }</p></div>
+    eventFeed.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="player1Event"><p>${
+        playerName + " committed a foul on the " + ball
+      }</p></div>
     <div><p class="break">End of Break</p></div>
-    <div></div>`;
+    <div></div>`
+    );
   } else if (other == "foul2") {
-    eventFeed.innerHTML += `<div></div>
+    eventFeed.insertAdjacentHTML(
+      "afterbegin",
+      `<div></div>
     <div><p class="break">End of Break</p></div>
     <div class="player2Event"><p>${
       playerName + " committed a foul on the " + ball
-    }</p></div>`;
+    }</p></div>`
+    );
   } else if (player) {
-    eventFeed.innerHTML += `<div class="player1Event"><p>${
-      playerName + " potted " + ball
-    }</p></div>
+    eventFeed.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="player1Event"><p>${playerName + " potted " + ball}</p></div>
     <div><p class="break">Break: ${playerBreak}</p></div>
-    <div></div>`;
+    <div></div>`
+    );
   } else if (!player) {
-    eventFeed.innerHTML += `<div></div>
+    eventFeed.insertAdjacentHTML(
+      "afterbegin",
+      `<div></div>
     <div><p class="break">Break: ${playerBreak}</p></div>
-    <div class="player2Event"><p>${playerName + " potted " + ball}</p></div>`;
+    <div class="player2Event"><p>${playerName + " potted " + ball}</p></div>`
+    );
   }
 };
 
