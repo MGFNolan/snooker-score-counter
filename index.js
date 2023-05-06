@@ -13,6 +13,7 @@ const eventFeed = document.getElementById("eventFeed");
 
 let player1Val = 0;
 let player2Val = 0;
+let redsPotted = 0;
 let player1Status = false;
 let player2Status = false;
 let foulShow2 = false;
@@ -78,30 +79,40 @@ const addEvent = (player, playerName, ball, other) => {
 document.addEventListener("click", function (e) {
   switch (e.target.id) {
     case "player1NameSubmit":
-      player1Name = player1NameInput.value;
-      player1Btns.hidden = false;
-      player1NameDisplay.innerHTML = player1NameInput.value;
-      player1NameInput.hidden = true;
-      player1NameSubmit.style.visibility = "hidden";
+      if (player1NameInput.value) {
+        player1Name = player1NameInput.value;
+        player1Btns.hidden = false;
+        player1NameDisplay.innerHTML = player1NameInput.value;
+        player1NameInput.hidden = true;
+        player1NameSubmit.style.visibility = "hidden";
+      } else {
+        alert("Error - Please enter a name for Player 1");
+      }
       break;
     case "player2NameSubmit":
-      player2Name = player2NameInput.value;
-      player2Btns.hidden = false;
-      player2NameDisplay.innerHTML = player2NameInput.value;
-      player2NameInput.hidden = true;
-      player2NameSubmit.style.visibility = "hidden";
+      if (player1NameInput.value) {
+        player2Name = player2NameInput.value;
+        player2Btns.hidden = false;
+        player2NameDisplay.innerHTML = player2NameInput.value;
+        player2NameInput.hidden = true;
+        player2NameSubmit.style.visibility = "hidden";
+      } else {
+        alert("Error - Please enter a name for Player 2");
+      }
       break;
 
     case "red1":
       player1Val++;
       player1Points.textContent = player1Val;
       playerBreak++;
+      redsPotted++;
       addEvent(player1, player1Name, "red");
       break;
     case "red2":
       player2Val++;
       player2Points.textContent = player2Val;
       playerBreak++;
+      redsPotted++;
       addEvent(player2, player2Name, "red");
       break;
 
